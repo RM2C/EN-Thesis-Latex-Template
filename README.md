@@ -7,6 +7,13 @@
 This repository provides a LaTeX template for an English master's thesis based on `ujreport`.
 It is configured for `uplatex + dvipdfmx` and includes a title page, abstract, table of contents, main chapters, acknowledgements, references, and a research achievements page.
 
+### For Overleaf
+
+Download the tex zip and upload into overleaf.Change settings as following:  
+- Main document: `main.tex`
+- Compiler: `LaTex`
+- TeX Live Version: `2025`
+
 ### File Structure
 
 - `main.tex`: Main entry file of the thesis.
@@ -176,6 +183,13 @@ Example:
 
 このリポジトリは、`ujreport` をベースにした英語修士論文用の LaTeX テンプレートです。
 `uplatex + dvipdfmx` でのコンパイルを前提としており、表紙、Abstract、目次、本文、謝辞、参考文献、研究業績ページを含みます。
+
+### OverLeafを利用する方
+
+Download the tex zip and upload into overleaf.Change settings as following:  
+- Main document: `main.tex`
+- Compiler: `LaTex`
+- TeX Live Version: `2025`
 
 ### ファイル構成
 
