@@ -1,0 +1,97 @@
+%%
+% English master's thesis template
+%%
+\documentclass[11pt]{ujreport}
+\usepackage[dvipdfmx,a4paper,textheight=23.7cm,top=3cm,left=3cm,right=3cm,headheight=14pt]{geometry}
+
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{enumitem}
+\usepackage{url}
+\usepackage[dvipdfmx,hidelinks,plainpages=false,pdfpagelabels,hypertexnames=false]{hyperref}
+\usepackage{pxjahyper}
+\hypersetup{
+    colorlinks=false
+}
+\usepackage{amsmath}
+\usepackage{otf}
+\usepackage{chngcntr}
+\renewcommand{\baselinestretch}{1.1}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{array}
+
+\usepackage{English_thesis}
+
+\newif\ifusebibliography
+\usebibliographytrue
+
+\年度{2026}
+\学位種別{MASTER’S THESIS}
+\題目{Thesis Title\\Subtitle}
+\指導教員{Supervisor}
+\所属一行目{Graduate School of Information Science and Engineering Ritsumeikan University}
+\所属二行目{MASTER’S PROGRAM}
+\所属三行目{MAJOR in Advanced Information Science and Engineering}
+\学籍番号{Student ID}
+\氏名{Name}
+
+\makeatletter
+\setlength{\@fptop}{0pt}
+\setlength{\@fpbot}{0pt plus 1fil}
+\makeatother
+
+\newcommand{\achievementauthor}[1]{\underline{#1}}
+
+\begin{document}
+\maketitle
+\pagenumbering{roman}
+
+\begin{abstract}
+Write your abstract here.
+
+\keywords{
+Keyword 1\\
+Keyword 2\\
+Keyword 3\\
+Keyword 4\\
+}
+\end{abstract}
+
+\tableofcontents
+% \listoffigures
+% \listoftables
+
+\clearpage
+\pagenumbering{arabic}
+
+\include{body}
+
+\phantomsection
+\addcontentsline{toc}{chapter}{Acknowledgements}
+\section*{Acknowledgements}
+Write your acknowledgements here.
+
+\clearpage
+
+\ifusebibliography
+    \phantomsection
+    \addcontentsline{toc}{chapter}{\bibname}
+    \nocite{*}
+    \bibliographystyle{rm2c_junsrt}
+    \bibliography{references}
+\fi
+
+\clearpage
+\phantomsection
+\addcontentsline{toc}{chapter}{Research Achievements}
+\section*{Research Achievements}
+
+\begin{list}{}{\setlength{\leftmargin}{0pt}\setlength{\itemindent}{0pt}\setlength{\itemsep}{6pt}}
+    \item \achievementauthor{Author}, Coauthor, and Author, ``Title of the Journal Paper,'' \textit{Journal Name}, vol. x, no. x, pp. xx--xx, Year.
+    \item \achievementauthor{Author}, Coauthor, and Author, ``Title of the Conference Paper,'' in \textit{Proceedings of Conference Name}, City, Country, Year, pp. xx--xx.
+    \item \achievementauthor{Author}, Coauthor, and Author, ``Title of the Presentation,'' Name of Workshop or Symposium, City, Japan, Year.
+\end{list}
+
+% Add appendices here if necessary.
+
+\end{document}

@@ -1,0 +1,218 @@
+%       Thesis manuscript style file (English version)
+
+\def\年度#1{\gdef\@year{#1}}
+%\def\学期#1{\gdef\@semester{#1}}
+\def\題目#1{\gdef\@title{#1}}
+\def\指導教員#1{\gdef\@teacher{#1}}
+%\def\クラス#1{\gdef\@class{#1}}
+%\def\コース#1{\gdef\@course{#1}}
+\def\学位種別#1{\gdef\@degree{#1}}
+\def\所属一行目#1{\gdef\@affiliationlineone{#1}}
+\def\所属二行目#1{\gdef\@affiliationlinetwo{#1}}
+\def\所属三行目#1{\gdef\@affiliationlinethree{#1}}
+% \def\学科#1{\gdef\@faculty{#1}} % For students following the 2012 curriculum, record the department.
+% \def\回生#1{\gdef\@grade{#1}}
+\def\学籍番号#1{\gdef\@IDcode{#1}}
+\def\氏名#1{\gdef\@author{#1}}
+
+% If you want to change the font size of the whole document, adjust the font sizes in this block.
+% \renewcommand{\large}{\@setfontsize\large{12pt}{17pt}}
+% \renewcommand{\Large}{\@setfontsize\Large{14pt}{21pt}}
+% \renewcommand{\LARGE}{\@setfontsize\LARGE{16pt}{24pt}}
+% \renewcommand{\huge}{\@setfontsize\huge{20pt}{28pt}}
+% \renewcommand{\Huge}{\@setfontsize\Huge{24pt}{32pt}}
+
+% \renewcommand{\sfdefault}{cmss} % Use Latin Modern Sans Serif for the sans-serif family
+% \usepackage{lmodern}
+% \renewcommand{\sfdefault}{lmss} % Use Latin Modern Sans Serif for the sans-serif family
+
+% \usepackage[T1]{fontenc}
+% \renewcommand{\sfdefault}{ecss}
+% \renewcommand*\familydefault{\sfdefault}
+
+% \usepackage{cmbright}
+% \renewcommand{\sfdefault}{cmbr}
+
+\renewcommand{\prechaptername}{Chapter }
+\renewcommand{\postchaptername}{}
+\renewcommand{\contentsname}{Contents}
+\renewcommand{\listfigurename}{List of Figures}
+\renewcommand{\listtablename}{List of Tables}
+
+% Change the fonts and styles of chapter and section titles
+\usepackage{titlesec}
+% Change the chapter font and style
+\titleformat{\chapter}%
+    [block]%
+    {\sffamily\bfseries\huge}%
+    {Chapter \thechapter}%
+    {1.0em}%
+    {\rmfamily}%
+\titlespacing{\chapter}
+    {0pt}%
+    {18pt}%
+    {34pt}%
+% Change the section font and style
+% \titleformat*{\section}{\Large\bfseries\sffamily}
+\titleformat{\section}%
+    [block]%
+    {\sffamily\Large\bfseries}%
+    {\thesection}%
+    {1.0em}%
+    {\rmfamily}%
+% Change the subsection font and style
+% \titleformat*{\subsection}{\large\bfseries\sffamily}
+\titleformat{\subsection}%
+    [block]%
+    {\sffamily\large\bfseries}%
+    {\thesubsection}%
+    {1.0em}%
+    {\rmfamily}%
+% Change the subsubsection font and style
+% \titleformat*{\subsubsection}{\normalsize\bfseries\sffamily}
+\titleformat{\subsubsection}%
+    [block]%
+    {\sffamily\normalsize\bfseries}%
+    {\thesubsubsection}%
+    {1.0em}%
+    {\rmfamily}%
+
+% Change the fonts and styles of chapter and section titles in the table of contents
+\usepackage{titletoc}
+\titlecontents{chapter}
+[0em] % Left spacing
+{\vskip8pt\bfseries} % Executed before the entry
+% {\vskip8pt} % Executed before the entry
+{{\sffamily\thecontentslabel}\hspace{0.8em}}
+{\hspace{.0em}}
+{\hfill\contentspage}
+[\vskip 0pt] % Executed after the entry
+
+\titlecontents{section}
+[1.6em] % Left spacing
+{} % Executed before the entry
+{{\sffamily\thecontentslabel}\hspace{1.0em}}
+{} % Format for unnumbered entries
+{\dotfill\contentspage}
+[\vskip 0pt] % Executed after the entry
+
+\titlecontents{subsection}
+[2.6em] % Left spacing
+{} % Executed before the entry
+{{\sffamily\thecontentslabel}\hspace{1.0em}}
+{} % Format for unnumbered entries
+{\dotfill\contentspage}
+[\vskip 0pt] % Executed after the entry
+
+% \titlecontents{subsection}[2.7em]{\sffamily}
+% {\thecontentslabel\enspace}
+% {}
+% {\titlerule*[1pc]{.}\quad\contentspage}[\vskip 3pt]
+
+% \usepackage{tocloft}
+% % Font for chapter entries in the table of contents
+% \renewcommand{\cftchapfont}{\sffamily\normalsize}
+% % Font for chapter page numbers in the table of contents
+% \renewcommand{\cftchappagefont}{\sffamily\normalsize}
+% % Make the table-of-contents title large, bold, and centered
+% \renewcommand{\cfttoctitlefont}{\hfill\large\bfseries\sffamily}
+% \renewcommand{\cftaftertoctitle}{\hfill\null\sffamily}
+
+\newlength{\coverheight}
+\setlength{\coverheight}{\textheight}
+
+% \renewcommand\bottomfraction{.6} % Upper limit of the fraction occupied by floats at the bottom of a page
+\setlength\abovecaptionskip{0pt}
+% \tabrowsep = 1pt % Space between a table and its caption
+
+\renewcommand{\topfraction}{.9}
+\renewcommand{\bottomfraction}{.9}
+\renewcommand\bottomfraction{.9}
+\renewcommand{\textfraction}{0.0}
+\renewcommand{\floatpagefraction}{.9}
+\setcounter{totalnumber}{10}
+\setcounter{topnumber}{10}
+\setcounter{bottomnumber}{10}
+
+\renewcommand{\figurename}{\textbf{Figure}}
+\renewcommand{\tablename}{\textbf{Table}}
+
+\newcommand{\figref}[1]{\normalsize \textsf{Figure~\ref{#1}}}
+\newcommand{\tabref}[1]{\normalsize \textsf{Table~\ref{#1}}}
+
+\newcommand{\eqrefer}[1]{\normalsize \textsf{Eq.~\eqref{#1}}}
+
+\def\maketitle{
+\begin{titlepage}
+
+\vbox to\coverheight{%
+\begin{center}
+{\huge \@year\par} \vskip 3.5em
+{\Huge \@degree \par} \vskip 6.5em
+{{\sffamily\bfseries\Huge \@title\par}}
+\vfil
+\begin{tabular}{rl}
+{\Large ACADEMIC SUPERVISORS:}& {{\LARGE \@teacher}} \\ \\
+\end{tabular}\\
+\vfil
+{\LARGE \@affiliationlineone\\}
+\vskip 0.4em
+{\LARGE \@affiliationlinetwo\\}
+\vskip 0.4em
+{\LARGE \@affiliationlinethree\\}
+
+\begin{tabular}{rl}
+\\ \\
+{\large STUDENT ID:}& {{\LARGE \@IDcode}} \\ \\
+{\large NAME:}& {{\LARGE \@author }}\\ \\
+\end{tabular}\\
+\end{center}
+}
+
+\end{titlepage}
+
+\let\maketitle\relax}
+
+\def\abstract{
+    \titlepage
+    %\null\vfil
+    \begin{flushleft}
+    % {\LARGE \bf Abstract}
+    {\Large \bf Abstract}
+    \end{flushleft}}
+
+\def\endabstract{
+    \par
+    \vfil
+    \null
+    \endtitlepage}
+
+\providecommand{\keywords}[1]
+{
+    \vspace{20pt}
+    \noindent
+    \textbf{Keywords}\\#1
+}
+
+\renewcommand{\bibname}{References}
+
+\renewenvironment{thebibliography}[1]
+{\section*{\bibname\@mkboth{\bibname}{\bibname}}%
+  \list{\@biblabel{\@arabic\c@enumiv}}%
+       {\settowidth\labelwidth{\@biblabel{#1}}%
+        \leftmargin\labelwidth
+        \advance\leftmargin\labelsep
+ \setlength\itemsep{-1.5pt}% Adjust this value for spacing between items
+ \setlength\baselineskip{16pt}% Adjust this value for line spacing
+        \@openbib@code
+        \usecounter{enumiv}%
+        \let\p@enumiv\@empty
+        \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+  \sloppy
+  \clubpenalty4000
+  \@clubpenalty\clubpenalty
+  \widowpenalty4000%
+  \sfcode`\.\@m}
+ {\def\@noitemerr
+   {\@latex@warning{Empty `thebibliography' environment}}%
+  \endlist}
